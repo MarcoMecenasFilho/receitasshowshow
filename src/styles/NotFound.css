@@ -1,0 +1,32 @@
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 30px;
+  padding: 30px;
+  text-align: justify;
+  width: 80%;
+}
+
+.main-container img {
+  border-radius: 10px;
+  box-shadow: 6px 5px 15px -5px black;
+  width: 80%;
+}
+
+.main-container button {
+  background-color: rgb(188, 221, 175);
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 6px 5px 15px -5px black;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 100px 0 40px;
+  padding: 30px;
+}

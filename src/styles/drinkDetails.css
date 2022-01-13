@@ -1,0 +1,123 @@
+.div-img {
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.div-img img {
+  position: 100px;
+}
+
+.details-card img {
+  width: 100%;
+}
+
+.details-card h1 {
+  font-size: larger;
+  margin-left: 7px;
+  margin-top: 30px;
+}
+
+.category {
+  align-items: center;
+  color: rgb(124, 124, 124);
+  font-size: medium;
+  margin-left: 7px;
+}
+
+.ingredients-div {
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  margin: auto;
+  width: 90%;
+}
+
+
+.ingredients-div li {
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.instructions {
+  color: black;
+  margin-left: 20px;
+  text-align: justify;
+  width: 90%;
+}
+
+.btns-fav-share {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.fav-btn {
+  width: 45%;
+}
+
+.share-btn {
+  width: 45%;
+}
+
+.clip-board {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.recomendadas {
+  background-color: rgb(235, 235, 235);
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.card-carousel {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 66.5%;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-items {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-items a {
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 6px 5px 15px -5px black;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  margin: 30px;
+  width: 70%;
+}
+
+
+.carousel-items a img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card-carousel p {
+  color: black;
+}
+
+.start-btn {
+  background-color: rgb(151, 190, 148);
+  border-style: none;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}

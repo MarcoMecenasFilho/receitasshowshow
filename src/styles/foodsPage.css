@@ -1,7 +1,108 @@
 .main-div {
+  align-items: center;
   background-image: url('../images/foodspage.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+}
+
+.main-div img {
+  width: 100%;
+}
+
+.main-div  header {
+  align-items: flex-start;
+  background-color: gray;
+  color:  white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-infos {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.user-infos h1 {
+  font-size: 60px;
+}
+
+.searchbar {
+  margin: 20px 0 20px 40px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filters-Btns {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 ;
+  width: 100%;
+
+}
+
+.filters-Btns button {
+  border-radius: 10px;
+  border-style: none;
+  font-size: 15px;
+}
+
+.filters-Btns button:hover {
+  background-color: red;
+}
+
+.filters-Btns button:focus {
+  background-color: red;
+}
+
+@media screen and (max-width: 370px){
+
+  .filters-Btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0 ;
+    width: 80%;
+  }
+
+  .filters-Btns button {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 ;
+    width: 100%;
+  
+  }
+  
+}
+
+@media screen and (min-width: 600px){
+  .filters-Btns button {
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (min-width: 1400px){
+
+  .user-infos h1 {
+    font-size: 100px;
+  }
+
+  .filters-Btns button {
+    width: 15%;
+    font-size: 30px;
+  }
+  
 }

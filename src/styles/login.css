@@ -1,11 +1,10 @@
 
 .div-login{
   align-items: center;
-  background-attachment: fixed;
   background-image: url('../images/5555.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -38,4 +37,21 @@ padding: 3%;
 
 .login-card {
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 651px){
+
+
+  .div-login img {
+    width: 40%;
+  }
+
+}
+
+@media screen and (min-width: 1350px){
+
+  .div-login img {
+    width: 30%;
+  }
+
 }

@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-search {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+form input {
+  margin: 20px;
+}
+
+#search {
+  width: 90%;
+}
+
+
+.exit-btn {
+  margin-left: 90%;
+  width: 10%;
+  border-radius: 10px;
+  border-style: none;
+  background-color: red;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 990px){
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  form {
+  width: 100%;
+  }
+
+}

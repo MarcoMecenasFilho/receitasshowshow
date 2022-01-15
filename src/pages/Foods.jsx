@@ -5,6 +5,7 @@ import ProfileLink from '../components/ProfileLInk';
 import SearchBar from '../components/SearchBar';
 import AppContext from '../context/AppContext';
 import '../styles/foodsPage.css';
+import bannergif from '../images/banner.gif';
 
 export default function Foods() {
   const { mealResults, setMealsResults } = useContext(AppContext);
@@ -65,13 +66,16 @@ export default function Foods() {
 
   return (
     <div className="main-div">
+      <img src={ bannergif } alt="banner gif" />
       <header>
-        <ProfileLink />
-        <h1 data-testid="page-title">Comidas</h1>
+        <div className="user-infos">
+          <ProfileLink />
+          <h1 data-testid="page-title">Comidas</h1>
+        </div>
         <SearchBar />
       </header>
       <main>
-        <div className="filtersBtns">
+        <div className="filters-Btns">
           {filters.map((filter, index) => (
             <button
               key={ index }

@@ -1,0 +1,39 @@
+footer {
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 10px;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 770px){
+  footer {
+    bottom: 100px;
+    flex-direction: column;
+    right:  10px;
+    width: 7%;
+  }
+}
+
+@media screen and (min-width: 1400px){
+
+footer {
+  bottom: 100px;
+  flex-direction: column;
+  right:  10px;
+  width: 5%;
+}
+
+}
+
+@media screen and (min-width: 1640px){
+  footer {
+    bottom: 70px;
+    flex-direction: column;
+    right:  10px;
+    width: 5%;
+  }
+}

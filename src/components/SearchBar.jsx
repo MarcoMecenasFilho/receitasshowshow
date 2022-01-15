@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import searchIcon from '../images/searchIcon.svg';
-/* import fetchUrl from '../services/fetchAPI'; */
 import AppContext from '../context/AppContext';
+import '../styles/searchbarComponent.css';
 
 export default function SearchBar() {
   const [searchDisplay, setSearchDisplay] = useState(false);
@@ -96,18 +96,26 @@ export default function SearchBar() {
   }
 
   return (
-    <div className={ searchDisplay && 'searchBar' }>
+    <div className="container">
       <button
         type="button"
         onClick={ toggleSearchDisplay }
         data-testid="search-top-btn"
         src={ searchIcon }
+        className="btn-search"
       >
-        <img src={ searchIcon } alt="Search icon" />
+        Pesquisar
       </button>
       {searchDisplay
       && (
         <form>
+          <button
+            type="button"
+            className="exit-btn"
+            onClick={ () => setSearchDisplay(false) }
+          >
+            x
+          </button>
           <label htmlFor="ingredient">
             Ingrediente
             <input
@@ -156,6 +164,7 @@ export default function SearchBar() {
             type="button"
             data-testid="exec-search-btn"
             onClick={ handleClick }
+            className="btn-search"
           >
             Buscar
           </button>

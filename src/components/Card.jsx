@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../styles/cardComponent.css';
 
 export default function Card({ results, type }) {
   const MAX_RESULTS = 12;
@@ -8,10 +9,14 @@ export default function Card({ results, type }) {
   const slicedResults = results.slice(0, MAX_RESULTS);
 
   return (
-    <div className="cardContainer">
+    <div className="container">
       {
         slicedResults.map((result, index) => (
-          <div key={ index } data-testid={ `${index}-recipe-card` }>
+          <div
+            key={ index }
+            data-testid={ `${index}-recipe-card` }
+            className="card-recipe"
+          >
             <Link
               to={
                 type === 'Meal'

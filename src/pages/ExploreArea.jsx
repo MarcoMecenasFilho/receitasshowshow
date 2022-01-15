@@ -3,7 +3,7 @@ import ProfileLink from '../components/ProfileLInk';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import AppContext from '../context/AppContext';
-import Card from '../components/Card';
+import CardRecipes from '../components/CardRecipes';
 
 export default function ExploreArea() {
   const [filtersByArea, setFiltersByArea] = useState([]);
@@ -82,8 +82,8 @@ export default function ExploreArea() {
         </option>
       </select>
       {mealResults.length > 0
-        ? <Card results={ mealResults } type={ isMeals } />
-        : <Card results={ mealDefault } type={ isMeals } />}
+        ? <CardRecipes results={ mealResults } type={ isMeals } />
+        : <CardRecipes results={ mealDefault } type={ isMeals } />}
       <Footer />
     </header>);
 }

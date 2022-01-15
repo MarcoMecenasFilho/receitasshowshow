@@ -39,7 +39,14 @@ export default function DetailsCard({ recipe, type }) {
 
         ))}
       </div>
-      <p className="instructions" data-testid="instructions">{recipe.strInstructions}</p>
+      <h2>Instructions</h2>
+      <p
+        className="instructions"
+        data-testid="instructions"
+      >
+        {recipe.strInstructions}
+
+      </p>
       <div style={ { width: '400px' } }>
         {
           type === 'Meal' && (

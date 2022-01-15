@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import profileIcon from '../images/profileIcon.svg';
+import profile from '../images/profile.png';
 
 export default function ProfileLink() {
   return (
-    <Link to="/perfil" src={ profileIcon } data-testid="profile-top-btn">
-      <img src={ profileIcon } alt="Profile icon" />
+    <Link to="/perfil" src={ profile } data-testid="profile-top-btn">
+      <img src={ profile } alt="Profile icon" />
     </Link>
   );
 }

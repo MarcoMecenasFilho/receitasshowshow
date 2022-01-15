@@ -3,9 +3,9 @@ import ProfileLink from '../components/ProfileLInk';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import AppContext from '../context/AppContext';
-import Card from '../components/Card';
-import StyledDiv from '../styles/FoodsAndDrinks';
-import StyledHeader from '../styles/Header';
+import CardRecipes from '../components/CardRecipes';
+import bannergif from '../images/banner.gif';
+import '../styles/recipes.css';
 
 export default function Drinks() {
   const { drinksResults, setDrinksResults } = useContext(AppContext);
@@ -65,14 +65,17 @@ export default function Drinks() {
   }, []);
 
   return (
-    <>
-      <StyledHeader>
-        <ProfileLink />
-        <h1 data-testid="page-title">Bebidas</h1>
+    <div className="main-div">
+      <img src={ bannergif } alt="banner gif" />
+      <header>
+        <div className="user-infos">
+          <ProfileLink />
+          <h1 data-testid="page-title">Bebidas</h1>
+        </div>
         <SearchBar />
-      </StyledHeader>
-      <StyledDiv>
-        <div className="filtersBtns">
+      </header>
+      <main>
+        <div className="filters-Btns-drink">
           {filters.map((filter, index) => (
             <button
               key={ index }
@@ -93,10 +96,10 @@ export default function Drinks() {
         </div>
         {
           drinksResults && drinksResults.length > 0
-            ? <Card results={ drinksResults } type={ isDrink } />
-            : <Card results={ drinksDefault } type={ isDrink } />
+            ? <CardRecipes results={ drinksResults } type={ isDrink } />
+            : <CardRecipes results={ drinksDefault } type={ isDrink } />
         }
-      </StyledDiv>
+      </main>
       <Footer />
-    </>);
+    </div>);
 }

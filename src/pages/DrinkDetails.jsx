@@ -6,8 +6,9 @@ import { favoriteCockTail,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { checkLocalStore } from '../service/localStorageFunctions';
 import { checkButtonStartDrink } from '../service/StartButtonFunction';
-import shareIcon from '../images/shareIcon.svg';
+import shareIcon from '../images/iconCompartilhar.png';
 import CarouselDrink from '../components/CarouselDrink';
+import Footer from '../components/Footer';
 
 export default function DrinkDetails() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -43,11 +44,13 @@ export default function DrinkDetails() {
   }
 
   const infoDrinks = (
-    <div className="details-div" style={ { width: '100%' } }>
+    <div className="details-div">
+
+      <DetailsCard recipe={ recipeApi } type="Drink" />
       { doneButtonHide
       && (
         <button
-          className="start-btn"
+          className={ inProgress ? 'continue-btn' : 'start-btn' }
           type="button"
           data-testid="start-recipe-btn"
           onClick={
@@ -58,8 +61,6 @@ export default function DrinkDetails() {
           {inProgress ? 'Continuar Receita' : 'Iniciar Receita'}
 
         </button>) }
-
-      <DetailsCard recipe={ recipeApi } type="Drink" />
       <div className="btns-fav-share">
         <button
           className="fav-btn"
@@ -94,6 +95,7 @@ export default function DrinkDetails() {
         <h2 className="recomendadas">Recomendadas</h2>
         <CarouselDrink />
       </div>
+      <Footer />
     </div>
   );
 }

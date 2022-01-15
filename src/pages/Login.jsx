@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, FloatingLabel, Card } from 'react-bootstrap';
-import '../styles/login.css';
 import banner from '../images/logo.gif';
+import '../styles/login.css';
 
 export default function Login({ history }) {
   const [email, setEmail] = useState('');
@@ -37,7 +37,7 @@ export default function Login({ history }) {
     <div className="div-login">
       <img src={ banner } alt="banner" />
       <Card className="login-card">
-        <Form onSubmit={ (e) => handleClick(e) } className="form">
+        <Form onSubmit={ (e) => handleClick(e) } className="form-login">
           <h1>Login:</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <FloatingLabel

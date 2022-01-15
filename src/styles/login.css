@@ -2,7 +2,6 @@
 .div-login{
   align-items: center;
   background-image: url('../images/5555.jpg');
-  background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -22,13 +21,9 @@
   opacity: 0.8;
 }
 
-.form {
+.form-login {
   margin: 30px;
   margin-bottom: 40px;
-}
-
-Form {
-  margin-bottom: 2%;
 }
 
 .hstack.gap-4 {
@@ -40,7 +35,6 @@ padding: 3%;
 }
 
 @media screen and (min-width: 651px){
-
 
   .div-login img {
     width: 40%;

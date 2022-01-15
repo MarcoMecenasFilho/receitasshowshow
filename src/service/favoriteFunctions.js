@@ -1,5 +1,5 @@
-import blackHeartIcon from '../images/blackHeartIcon.svg';
-import whiteHeartIcon from '../images/whiteHeartIcon.svg';
+import iconfavorite from '../images/iconfavorite.png';
+import noIconFavorite from '../images/nofavoriteIcon.png';
 
 export function favoriteCockTail(id, recipeApiResponse, setFavoriteState) {
   const { strDrink, strCategory, strDrinkThumb, strAlcoholic } = recipeApiResponse;
@@ -64,9 +64,9 @@ export function favoriteFood(id, recipeApiResponse, setFavoriteState) {
 
 export function isFavoriteIcon(favoriteState) {
   if (favoriteState === false) {
-    return whiteHeartIcon;
+    return noIconFavorite;
   }
   if (favoriteState === true) {
-    return blackHeartIcon;
+    return iconfavorite;
   }
 }

@@ -5,14 +5,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import '../styles/drinkDetails.css';
 
 export default function CardCarousel({ results, type }) {
-  const carousel = 6;
-
-  const slicedResults = results.slice(0, carousel);
-
   return (
     <div className="card-carousel">
       <Carousel variant="dark" className="carousel">
-        {slicedResults.map((recipes, index) => (
+        {results.map((recipes, index) => (
           <Carousel.Item
             key={ type === 'Meal'
               ? `${recipes.idMeal}`
@@ -28,12 +24,12 @@ export default function CardCarousel({ results, type }) {
                     ? `/comidas/${recipes.idMeal}`
                     : `/bebidas/${recipes.idDrink}`
                 }
+                className="link-carousel"
               >
                 <img
                   data-testid={ `${index}-card-img` }
                   src={ recipes[`str${type}Thumb`] }
                   alt=""
-                  style={ { width: '200px' } }
                 />
                 <p
                   data-testid={ `${index}-recomendation-title` }

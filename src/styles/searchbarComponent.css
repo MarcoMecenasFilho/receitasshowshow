@@ -1,7 +1,14 @@
 .container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
+}
+
+.bar-aline {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .btn-search {
@@ -11,19 +18,19 @@
   border-style: none;
 }
 
-form {
+.form-search {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: 20px;
 }
 
-form input {
+.form-search input {
   margin: 20px;
 }
 
 #search {
-  width: 90%;
+  width: 100%;
 }
 
 
@@ -45,7 +52,7 @@ form input {
     justify-content: center;
   }
   
-  form {
+  .form-search {
   width: 100%;
   }
 

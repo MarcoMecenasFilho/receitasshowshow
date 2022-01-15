@@ -1,20 +1,37 @@
-.div-img {
-  height: 300px;
-  overflow: hidden;
+.details-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.div-img {
+  margin-left: 5%;
+    width: 100%;
+  
 }
 
 .div-img img {
-  position: 100px;
+    border-radius: 10px;
+    box-shadow: 6px 5px 15px -5px black;
+    margin: 40px 0;
+    width: 25%;
 }
 
-.details-card img {
+.details-card {
   width: 100%;
 }
 
+
 .details-card h1 {
   font-size: larger;
-  margin-left: 7px;
+  margin-left: 3%;
+  margin-top: 30px;
+}
+
+.details-card h2 {
+  font-size: larger;
+  margin-left: 3%;
   margin-top: 30px;
 }
 
@@ -22,13 +39,14 @@
   align-items: center;
   color: rgb(124, 124, 124);
   font-size: medium;
-  margin-left: 7px;
+  margin-left: 3%;
 }
 
 .ingredients-div {
   background-color: rgb(235, 235, 235);
   border-radius: 5px;
-  margin: auto;
+  margin-left: 3%;
+  padding: 5px;
   width: 90%;
 }
 
@@ -40,8 +58,11 @@
 }
 
 .instructions {
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 15px;
   color: black;
-  margin-left: 20px;
+  margin-left: 3%;
   text-align: justify;
   width: 90%;
 }
@@ -51,20 +72,38 @@
   justify-content: space-around;
   margin-bottom: 30px;
   margin-top: 10px;
+  width: 20%;
 }
 
 .fav-btn {
-  width: 45%;
+  width: 30%;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+}
+
+.fav-btn img {
+  width: 100%;
 }
 
 .share-btn {
-  width: 45%;
+  width: 30%;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+}
+
+.share-btn img {
+  width: 100%;
 }
 
 .clip-board {
   align-items: center;
+  border: 1px black solid;
+  border-radius: 10px;
   text-align: center;
-  width: 100%;
+  width: 70%;
+  box-shadow: 6px 5px 15px -5px black;
 }
 
 .recomendadas {
@@ -92,32 +131,77 @@
   width: 100%;
 }
 
-.carousel-items a {
+.link-carousel {
+  text-decoration: none;
   align-items: center;
   border-radius: 10px 10px 0 0;
-  box-shadow: 6px 5px 15px -5px black;
   display: flex;
   flex-direction: column;
-  height: 270px;
+  height: 510px;
   margin: 30px;
   width: 70%;
+  background-color: rgb(235, 235, 235);
 }
 
 
-.carousel-items a img {
+.link-carousel img {
   border-radius: 10px 10px 0 0;
+  width: 100%;
 }
 
 .card-carousel p {
+  margin: 15px 0;
+  font-size: 40px;
+  font-weight: 900;
   color: black;
+
 }
 
 .start-btn {
-  background-color: rgb(151, 190, 148);
+  background-color: rgb(188, 253, 184);
+  border-radius: 10px;
   border-style: none;
-  bottom: 0;
-  position: fixed;
+  font-size: 30px;
+  font-weight: 700;
   text-align: center;
-  width: 100%;
-  z-index: 10;
+  width: 80%;
+}
+
+.continue-btn {
+  background-color: rgb(184, 228, 253);
+  border-radius: 10px;
+  border-style: none;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+}
+
+@media screen and (max-width: 800px){
+
+  .div-img {
+    height: 300px;
+    overflow: auto;
+    margin: 0;
+  }
+  
+  .div-img img {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .btns-fav-share {
+    width: 70%;
+  }
+
+  .link-carousel {
+    height: 250px;
+  }
+
+  .card-carousel p {
+    font-size: 30px;
+    margin: 15px 0;
+  }
+
 }

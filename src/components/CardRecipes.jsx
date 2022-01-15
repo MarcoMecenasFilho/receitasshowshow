@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/cardComponent.css';
 
-export default function Card({ results, type }) {
+export default function CardRecipes({ results, type }) {
   const MAX_RESULTS = 12;
 
   const slicedResults = results.slice(0, MAX_RESULTS);
@@ -37,6 +37,6 @@ export default function Card({ results, type }) {
   );
 }
 
-Card.propTypes = {
+CardRecipes.propTypes = {
   result: PropTypes.arrayOf().isRequired,
 }.isRequired;

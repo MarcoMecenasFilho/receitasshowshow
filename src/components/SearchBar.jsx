@@ -108,7 +108,7 @@ export default function SearchBar() {
       </button>
       {searchDisplay
       && (
-        <form>
+        <form className="form-search">
           <button
             type="button"
             className="exit-btn"
@@ -149,25 +149,25 @@ export default function SearchBar() {
               onClick={ ({ target }) => setFilter(target.value) }
             />
           </label>
-          <label htmlFor="search">
-            Pesquisa
+          <div className="bar-aline">
             <input
               id="search"
               type="text"
               name="search"
               data-testid="search-input"
+              placeholder="Digitar busca"
               onChange={ ({ target }) => setSearchKey(target.value) }
             />
-          </label>
-          <button
-            id="search"
-            type="button"
-            data-testid="exec-search-btn"
-            onClick={ handleClick }
-            className="btn-search"
-          >
-            Buscar
-          </button>
+            <button
+              id="search"
+              type="button"
+              data-testid="exec-search-btn"
+              onClick={ handleClick }
+              className="btn-search"
+            >
+              Ir
+            </button>
+          </div>
         </form>
       )}
     </div>

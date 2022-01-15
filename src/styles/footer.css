@@ -11,7 +11,7 @@ footer {
 
 @media screen and (min-width: 770px){
   footer {
-    bottom: 100px;
+    bottom: 10px;
     flex-direction: column;
     right:  10px;
     width: 7%;
@@ -21,7 +21,7 @@ footer {
 @media screen and (min-width: 1400px){
 
 footer {
-  bottom: 100px;
+  bottom: 10px;
   flex-direction: column;
   right:  10px;
   width: 5%;
@@ -29,9 +29,9 @@ footer {
 
 }
 
-@media screen and (min-width: 1640px){
+@media screen and (min-width: 1500px){
   footer {
-    bottom: 70px;
+    bottom: 10px;
     flex-direction: column;
     right:  10px;
     width: 5%;

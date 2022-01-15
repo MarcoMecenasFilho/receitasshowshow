@@ -15,7 +15,7 @@
 
 .main-div  header {
   align-items: flex-start;
-  background-color: gray;
+  background-color: black;
   color:  white;
   display: flex;
   flex-direction: column;
@@ -47,16 +47,18 @@ main {
 
 .filters-Btns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px 0 ;
-  width: 100%;
+  width: 95%;
 
 }
 
 .filters-Btns button {
   border-radius: 10px;
   border-style: none;
-  font-size: 15px;
+  font-size: 25px;
+  margin: 5px;
 }
 
 .filters-Btns button:hover {
@@ -67,31 +69,40 @@ main {
   background-color: red;
 }
 
-@media screen and (max-width: 370px){
 
-  .filters-Btns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 20px 0 ;
-    width: 80%;
-  }
-
-  .filters-Btns button {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0 ;
-    width: 100%;
-  
-  }
-  
+.filters-Btns-drink {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0 ;
+  width: 95%;
 }
+
+.filters-Btns-drink button {
+  border-radius: 10px;
+  border-style: none;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.filters-Btns-drink button:hover {
+  background-color: red;
+}
+
+.filters-Btns-drink button:focus {
+  background-color: red;
+}
+
+
 
 @media screen and (min-width: 600px){
   .filters-Btns button {
-    font-size: 30px;
+    font-size: 40px;
   }
 
+  .filters-Btns-drink button {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 1400px){
@@ -101,8 +112,11 @@ main {
   }
 
   .filters-Btns button {
-    width: 15%;
-    font-size: 30px;
+    font-size: 60px;
+  }
+
+  .filters-Btns-drink button {
+    font-size: 60px;
   }
   
 }

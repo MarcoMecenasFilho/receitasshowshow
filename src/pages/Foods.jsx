@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Card from '../components/Card';
+import CardRecipes from '../components/CardRecipes';
 import Footer from '../components/Footer';
 import ProfileLink from '../components/ProfileLInk';
 import SearchBar from '../components/SearchBar';
 import AppContext from '../context/AppContext';
-import '../styles/foodsPage.css';
 import bannergif from '../images/banner.gif';
+import '../styles/recipes.css';
 
 export default function Foods() {
   const { mealResults, setMealsResults } = useContext(AppContext);
@@ -95,8 +95,8 @@ export default function Foods() {
           </button>
         </div>
         {mealResults && mealResults.length > 0
-          ? <Card results={ mealResults } type={ isMeals } />
-          : <Card results={ mealDefault } type={ isMeals } />}
+          ? <CardRecipes results={ mealResults } type={ isMeals } />
+          : <CardRecipes results={ mealDefault } type={ isMeals } />}
       </main>
       <Footer />
     </div>

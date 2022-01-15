@@ -4,8 +4,7 @@ import Footer from '../components/Footer';
 import ProfileLink from '../components/ProfileLInk';
 import SearchBar from '../components/SearchBar';
 import AppContext from '../context/AppContext';
-import StyledHeader from '../styles/Header';
-import StyledDiv from '../styles/FoodsAndDrinks';
+import '../styles/foodsPage.css';
 
 export default function Foods() {
   const { mealResults, setMealsResults } = useContext(AppContext);
@@ -65,13 +64,13 @@ export default function Foods() {
   }, []);
 
   return (
-    <>
-      <StyledHeader>
+    <div className="main-div">
+      <header>
         <ProfileLink />
         <h1 data-testid="page-title">Comidas</h1>
         <SearchBar />
-      </StyledHeader>
-      <StyledDiv>
+      </header>
+      <main>
         <div className="filtersBtns">
           {filters.map((filter, index) => (
             <button
@@ -94,8 +93,8 @@ export default function Foods() {
         {mealResults && mealResults.length > 0
           ? <Card results={ mealResults } type={ isMeals } />
           : <Card results={ mealDefault } type={ isMeals } />}
-      </StyledDiv>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }

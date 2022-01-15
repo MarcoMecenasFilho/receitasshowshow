@@ -1,0 +1,7 @@
+.main-div {
+  background-image: url('../images/foodspage.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}

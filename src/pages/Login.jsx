@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button } from 'react-bootstrap';
-import StyledDiv from '../styles/Login';
+import { Form, Button, FloatingLabel, Card } from 'react-bootstrap';
+import '../styles/login.css';
+import banner from '../images/logo.gif';
 
 export default function Login({ history }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     localStorage.setItem('mealsToken', 1);
     localStorage.setItem('cocktailsToken', 1);
     localStorage.setItem('user', JSON.stringify({ email }));
@@ -31,32 +33,58 @@ export default function Login({ history }) {
 
   const PASSWORD_LENGTH = 6;
   return (
-    <StyledDiv>
-      <h1>Login</h1>
-      <Form onSubmit={ handleClick }>
-        <Form.Control
-          data-testid="email-input"
-          onChange={ handleEmail }
-          value={ email }
-          placeholder="Email"
-        />
-        <Form.Control
-          data-testid="password-input"
-          onChange={ handlePassword }
-          value={ password }
-          type="password"
-          placeholder="Senha"
-        />
-        <Button
-          type="submit"
-          data-testid="login-submit-btn"
-          disabled={ !(password.length > PASSWORD_LENGTH && validateEmail(email)) }
-          variant="flat"
-        >
-          Entrar
-        </Button>
-      </Form>
-    </StyledDiv>);
+
+    <div className="div-login">
+      <img src={ banner } alt="banner" />
+      <Card className="login-card">
+        <Form onSubmit={ (e) => handleClick(e) } className="form">
+          <h1>Login:</h1>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <FloatingLabel
+              controlId="floatingInput"
+              label="Email"
+              className="mb-2"
+            >
+              <Form.Control
+                type="email"
+                name="email"
+                onChange={ handleEmail }
+                placeholder="Email"
+                required
+                data-testid="email-input"
+              />
+            </FloatingLabel>
+            <Form.Text className="text-muted">
+              Nunca compartilhe seus dados de login.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <FloatingLabel controlId="floatingPassword" label="Senha">
+              <Form.Control
+                type="password"
+                name="password"
+                onChange={ handlePassword }
+                placeholder="Senha"
+                minLength="6"
+                required
+                data-testid="password-input"
+              />
+            </FloatingLabel>
+          </Form.Group>
+          <Button
+            variant="primary"
+            type="submit"
+            disabled={
+              !(password.length > PASSWORD_LENGTH && validateEmail(email))
+            }
+            data-testid="login-btn"
+          >
+            Entrar
+          </Button>
+        </Form>
+      </Card>
+    </div>
+  );
 }
 
 Login.propTypes = {

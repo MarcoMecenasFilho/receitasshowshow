@@ -9,6 +9,7 @@ import { checkButtonStartDrink } from '../service/StartButtonFunction';
 import shareIcon from '../images/iconCompartilhar.png';
 import CarouselDrink from '../components/CarouselDrink';
 import Footer from '../components/Footer';
+import ProfileLink from '../components/ProfileLInk';
 
 export default function DrinkDetails() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -83,6 +84,7 @@ export default function DrinkDetails() {
         >
           <img src={ shareIcon } alt="" />
         </button>
+        <ProfileLink />
       </div>
       {displayMessage && <p className="clip-board">Link copiado!</p>}
     </div>

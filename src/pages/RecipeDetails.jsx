@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import DetailsCard from '../components/DetailsCard';
-import '../styles/DetailsCard.css';
 import '../styles/drinkDetails.css';
 import { favoriteFood,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { checkLocalStore } from '../service/localStorageFunctions';
 import { checkButtonStartMeal } from '../service/StartButtonFunction';
-import shareIcon from '../images/shareIcon.svg';
+import shareIcon from '../images/iconCompartilhar.png';
+import Footer from '../components/Footer';
 import CarouselMeal from '../components/CarouselMeal';
 
 export default function RecipeDetails() {
@@ -44,11 +44,12 @@ export default function RecipeDetails() {
   }
 
   const infoMeals = (
-    <div>
+    <div className="details-div">
+      <DetailsCard recipe={ recipeApi } type="Meal" />
       { doneButtonHide
       && (
         <button
-          className="start-btn"
+          className={ inProgress ? 'continue-btn' : 'start-btn' }
           type="button"
           data-testid="start-recipe-btn"
           onClick={
@@ -59,7 +60,6 @@ export default function RecipeDetails() {
           {inProgress ? 'Continuar Receita' : 'Iniciar Receita'}
 
         </button>) }
-      <DetailsCard recipe={ recipeApi } type="Meal" />
       <div className="btns-fav-share">
         <button
           className="fav-btn"
@@ -95,6 +95,7 @@ export default function RecipeDetails() {
         <h2 className="recomendadas">Recomendadas</h2>
         <CarouselMeal />
       </div>
+      <Footer />
     </div>
   );
 }

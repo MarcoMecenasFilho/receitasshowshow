@@ -1,4 +1,4 @@
-.main-div {
+.main-div-foods {
   align-items: center;
   background-image: url('../images/foodspage.jpg');
   background-repeat: no-repeat;
@@ -9,11 +9,35 @@
   height: 100%;
 }
 
-.main-div img {
+.main-div-drinks {
+  align-items: center;
+  background-image: url('../images/3333.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-div-drinks img {
   width: 100%;
 }
 
-.main-div  header {
+.main-div-foods img {
+  width: 100%;
+}
+
+.main-div-drinks  header {
+  align-items: flex-start;
+  background-color: black;
+  color:  white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-div-foods  header {
   align-items: flex-start;
   background-color: black;
   color:  white;

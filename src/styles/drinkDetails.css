@@ -6,15 +6,13 @@
 }
 
 .div-img {
-  margin-left: 5%;
-    width: 100%;
-  
+  width: 100%;
 }
 
 .div-img img {
     border-radius: 10px;
     box-shadow: 6px 5px 15px -5px black;
-    margin: 40px 0;
+    margin: 40px 0 40px 3%;
     width: 25%;
 }
 
@@ -123,6 +121,7 @@
 
 .carousel {
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .carousel-items {
@@ -137,9 +136,7 @@
   border-radius: 10px 10px 0 0;
   display: flex;
   flex-direction: column;
-  height: 510px;
-  margin: 30px;
-  width: 70%;
+  margin: 30px; 
   background-color: rgb(235, 235, 235);
 }
 
@@ -163,6 +160,7 @@
   border-style: none;
   font-size: 30px;
   font-weight: 700;
+  margin-top: 30px;
   text-align: center;
   width: 80%;
 }
@@ -173,8 +171,22 @@
   border-style: none;
   font-size: 30px;
   font-weight: 700;
+  margin-top: 30px;
   text-align: center;
   width: 80%;
+}
+
+.wrapper {
+  position: relative;
+  padding-top: 56.25% 
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 800px){
@@ -193,10 +205,6 @@
 
   .btns-fav-share {
     width: 70%;
-  }
-
-  .link-carousel {
-    height: 250px;
   }
 
   .card-carousel p {

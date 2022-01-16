@@ -4,8 +4,6 @@ import ReactPlayer from 'react-player';
 import getFoodIngredients from '../service/getRecipeIngredients';
 import '../styles/drinkDetails.css';
 
-// React player solution was consulted in: https://www.npmjs.com/package/react-player
-
 export default function DetailsCard({ recipe, type }) {
   return (
     <div className="details-card">
@@ -47,12 +45,19 @@ export default function DetailsCard({ recipe, type }) {
         {recipe.strInstructions}
 
       </p>
-      <div style={ { width: '400px' } }>
-        {
-          type === 'Meal' && (
-            <ReactPlayer data-testid="video" url={ recipe.strYoutube } />)
-        }
-      </div>
+
+      {
+        type === 'Meal' && (
+          <div className="wrapper">
+            <ReactPlayer
+              className="player"
+              data-testid="video"
+              url={ recipe.strYoutube }
+              width="100%"
+              height="100%"
+            />
+          </div>)
+      }
     </div>
   );
 }

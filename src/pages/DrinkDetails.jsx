@@ -87,16 +87,16 @@ export default function DrinkDetails() {
         <ProfileLink />
       </div>
       {displayMessage && <p className="clip-board">Link copiado!</p>}
+      <div className="carosel-drink">
+        <h2 className="recomendadas">Recomendadas</h2>
+        <CarouselDrink />
+      </div>
     </div>
   );
 
   return (
     <div>
       {validate && infoDrinks}
-      <div className="carosel-drink">
-        <h2 className="recomendadas">Recomendadas</h2>
-        <CarouselDrink />
-      </div>
       <Footer />
     </div>
   );

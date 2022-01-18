@@ -1,5 +1,11 @@
+
+
 .details-div {
   align-items: center;
+  background-image: url('../images/drinkdetails.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -22,22 +28,37 @@
 
 
 .details-card h1 {
+  background: rgb(235, 235, 235);
+  border-radius: 10px;
   font-size: larger;
   margin-left: 3%;
   margin-top: 30px;
+  opacity: 0.8;
+  padding: 10px;
+  width: fit-content;
 }
 
 .details-card h2 {
+  background: rgb(235, 235, 235);
+  border-radius: 10px;
   font-size: larger;
   margin-left: 3%;
   margin-top: 30px;
+  opacity: 0.8;
+  padding: 10px;
+  width: fit-content;
 }
 
 .category {
   align-items: center;
+  background: rgb(235, 235, 235);
+  border-radius: 10px;
   color: rgb(124, 124, 124);
   font-size: medium;
   margin-left: 3%;
+  opacity: 0.8;
+  padding: 10px;
+  width: fit-content;
 }
 
 .ingredients-div {
@@ -45,6 +66,7 @@
   border-radius: 5px;
   margin-left: 3%;
   padding: 5px;
+  opacity: 0.8;
   width: 90%;
 }
 
@@ -62,6 +84,7 @@
   color: black;
   margin-left: 3%;
   text-align: justify;
+  opacity: 0.8;
   width: 90%;
 }
 
@@ -69,15 +92,17 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 40px;
+  opacity: 0.8;
   width: 20%;
 }
 
 .fav-btn {
-  width: 30%;
+  background-color: white;
   border-radius: 10px;
   border-style: none;
-  background-color: white;
+  opacity: 0.8;
+  width: 30%;
 }
 
 .fav-btn img {
@@ -89,6 +114,7 @@
   border-radius: 10px;
   border-style: none;
   background-color: white;
+  opacity: 0.8;
 }
 
 .share-btn img {
@@ -97,17 +123,24 @@
 
 .clip-board {
   align-items: center;
-  border: 1px black solid;
+  background-color:  rgb(235, 235, 235);
   border-radius: 10px;
   text-align: center;
+  opacity: 0.8;
   width: 70%;
-  box-shadow: 6px 5px 15px -5px black;
 }
 
 .recomendadas {
   background-color: rgb(235, 235, 235);
   font-size: 30px;
-  margin-left: 5px;
+  margin: 0 0 0 4%;
+}
+.carosel-drink {
+  background-image: url('../images/drinkdetails.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 1px;
 }
 
 .card-carousel {

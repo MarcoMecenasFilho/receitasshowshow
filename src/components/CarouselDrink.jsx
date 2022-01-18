@@ -20,10 +20,8 @@ export default function CarouselDrink() {
   }, []);
 
   return (
-    <div>
-      {validate && (
-        <CardCarousel type="Meal" results={ recipeApi } page="carousel" />
-      )}
-    </div>
+    validate && (
+      <CardCarousel type="Meal" results={ recipeApi } page="carousel" />
+    )
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import '../styles/inProgresspages.css';
 import getRecipesIngredients from '../service/getRecipeIngredients';
 import { favoriteFood,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
@@ -7,6 +8,8 @@ import { doneFood } from '../service/doneRecipesFunctions';
 import { clickMealBox, checkedBox } from '../service/checkBoxFunctions';
 import { totalSteps,
   checkBoxSteepsDone, checkLocalStore } from '../service/localStorageFunctions';
+import shareIcon from '../images/iconCompartilhar.png';
+import Footer from '../components/Footer';
 
 export default function FoodInProgress() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -58,11 +61,13 @@ export default function FoodInProgress() {
   const { strMealThumb, strMeal, strCategory, strInstructions } = recipeApi;
 
   const infosMeal = (
-    <div>
-      <img data-testid="recipe-photo" src={ strMealThumb } alt="" />
-      <h2 data-testid="recipe-title">{strMeal}</h2>
+    <div className="inprogress-details">
+      <div className="div-img">
+        <img data-testid="recipe-photo" src={ strMealThumb } alt="" />
+      </div>
+      <h1 data-testid="recipe-title">{strMeal}</h1>
       <h5 data-testid="recipe-category">{strCategory}</h5>
-      <h2>Ingredientes:</h2>
+      <h2>Ingredients:</h2>
       <div className="ingredient-measure">
         <div>
           {getRecipesIngredients(recipeApi).map((ingredient, index) => (
@@ -71,7 +76,10 @@ export default function FoodInProgress() {
               key={ ingredient.name }
               data-testid={ `${index}-ingredient-step` }
             >
-              <p>
+              <p
+                className={ statusCheckBox(`${ingredient.name} - ${ingredient.quantity}`)
+                && 'scratched' }
+              >
                 {ingredient.name}
                 -
                 {ingredient.quantity}
@@ -87,43 +95,55 @@ export default function FoodInProgress() {
           ))}
         </div>
       </div>
-      <p data-testid="instructions">{strInstructions}</p>
-      <button
-        type="button"
-        data-testid="finish-recipe-btn"
-        disabled={ incrementIngredients !== totalIngredients }
-        onClick={ () => clickDone() }
+      <h2>Instructions</h2>
+      <p
+        data-testid="instructions"
+        className="instructions-inprogress"
       >
-        Finalizar
+        {strInstructions}
 
-      </button>
-      <button
-        type="button"
-        value={ `http://localhost:3000/comidas/${id}` }
-        onClick={ ({ currentTarget }) => {
-          navigator.clipboard.writeText(currentTarget.value);
-          setDisplayMessage(true);
-        } }
-        data-testid="share-btn"
-      >
-        Compartilhar!!!
+      </p>
+      {displayMessage && <p className="copy-link">Link copiado!</p>}
+      <div className="btns-div">
+        <button
+          type="button"
+          className="finish-btn"
+          data-testid="finish-recipe-btn"
+          disabled={ incrementIngredients !== totalIngredients }
+          onClick={ () => clickDone() }
+        >
+          Finalizar
 
-      </button>
-      <button
-        type="button"
-        onClick={ () => favoriteMeals() }
-        data-testid="favorite-btn"
-        src={ isFavoriteIcon(isFavorite) }
-      >
-        <img src={ isFavoriteIcon(isFavorite) } alt="" />
+        </button>
+        <button
+          type="button"
+          className="share-btn-progress"
+          value={ `http://localhost:3000/comidas/${id}` }
+          onClick={ ({ currentTarget }) => {
+            navigator.clipboard.writeText(currentTarget.value);
+            setDisplayMessage(true);
+          } }
+          data-testid="share-btn"
+        >
+          <img src={ shareIcon } alt="" />
+        </button>
+        <button
+          type="button"
+          className="fav-btn-progress"
+          onClick={ () => favoriteMeals() }
+          data-testid="favorite-btn"
+          src={ isFavoriteIcon(isFavorite) }
+        >
+          <img src={ isFavoriteIcon(isFavorite) } alt="" />
 
-      </button>
+        </button>
+      </div>
     </div>);
 
   return (
     <div>
       {validate && infosMeal}
-      {displayMessage && <p>Link copiado!</p>}
+      <Footer />
     </div>
   );
 }

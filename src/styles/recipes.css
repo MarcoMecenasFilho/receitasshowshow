@@ -66,6 +66,7 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding-bottom: 110px;
   width: 100%;
 }
 

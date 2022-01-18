@@ -5,6 +5,7 @@ import { favoriteCockTail,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { clickCocktailsBox, checkedBox } from '../service/checkBoxFunctions';
 import doneDrink from '../service/doneRecipesFunctions';
+import shareIcon from '../images/iconCompartilhar.png';
 import { checkLocalStore,
   totalSteps, checkBoxSteepsDone } from '../service/localStorageFunctions';
 
@@ -42,7 +43,7 @@ export default function DrinkInProgress() {
     clickCocktailsBox(e, id, setIncrementIngredients, incrementIngredients);
   }
 
-  function StatusCheckBox(value) {
+  function statusCheckBox(value) {
     return checkedBox(value, id, 'cocktails');
   }
 
@@ -57,13 +58,15 @@ export default function DrinkInProgress() {
 
   const {
     strDrinkThumb, strDrink, strCategory, strInstructions, strAlcoholic } = recipeApi;
-  const infosMeal = (
-    <div>
-      <img data-testid="recipe-photo" src={ strDrinkThumb } alt="" />
-      <h2 data-testid="recipe-title">{strDrink}</h2>
+  const infosDrink = (
+    <div className="inprogress-details">
+      <div className="div-img">
+        <img data-testid="recipe-photo" src={ strDrinkThumb } alt="" />
+      </div>
+      <h1 data-testid="recipe-title">{strDrink}</h1>
       <h5 data-testid="recipe-category">{strCategory}</h5>
-      <p>{strAlcoholic}</p>
-      <h2>Ingredientes:</h2>
+      <p className="isAlcoholic">{strAlcoholic}</p>
+      <h2>Ingredients:</h2>
       <div className="ingredient-measure">
         <div>
           {getRecipeIngredients(recipeApi)
@@ -73,7 +76,12 @@ export default function DrinkInProgress() {
                 key={ ingredient.name }
                 data-testid={ `${index}-ingredient-step` }
               >
-                <p>
+                <p
+                  className={
+                    statusCheckBox(`${ingredient.name} - ${ingredient.quantity}`)
+                && 'scratched'
+                  }
+                >
                   {ingredient.name}
                   {' '}
                   -
@@ -85,7 +93,7 @@ export default function DrinkInProgress() {
                   value={ `${ingredient.name} - ${ingredient.quantity}` }
                   type="checkbox"
                   onClick={ (e) => clickCheckBox(e) }
-                  checked={ StatusCheckBox(
+                  checked={ statusCheckBox(
                     `${ingredient.name} - ${ingredient.quantity}`,
                   ) }
                 />
@@ -94,43 +102,51 @@ export default function DrinkInProgress() {
             ))}
         </div>
       </div>
-      <p data-testid="instructions">{strInstructions}</p>
-      <button
-        type="button"
-        data-testid="finish-recipe-btn"
-        disabled={ incrementIngredients !== totalIngredients }
-        onClick={ () => clickDone() }
+      <h2>Instructions</h2>
+      <p
+        data-testid="instructions"
+        className="instructions-inprogress"
       >
-        Finalizar
-
-      </button>
-      <button
-        type="button"
-        value={ `http://localhost:3000/bebidas/${id}` }
-        onClick={ ({ currentTarget }) => {
-          navigator.clipboard.writeText(currentTarget.value);
-          setDisplayMessage(true);
-        } }
-        data-testid="share-btn"
-      >
-        Compartilhar!!!
-
-      </button>
-      <button
-        type="button"
-        onClick={ () => favoriteClick() }
-        data-testid="favorite-btn"
-        src={ isFavoriteIcon(isFavorite) }
-      >
-        favoritar
-
-      </button>
+        {strInstructions}
+      </p>
+      {displayMessage && <p className="copy-link">Link copiado!</p>}
+      <div className="btns-div">
+        <button
+          type="button"
+          className="finish-btn"
+          data-testid="finish-recipe-btn"
+          disabled={ incrementIngredients !== totalIngredients }
+          onClick={ () => clickDone() }
+        >
+          Finish
+        </button>
+        <button
+          type="button"
+          className="share-btn-progress"
+          value={ `http://localhost:3000/bebidas/${id}` }
+          onClick={ ({ currentTarget }) => {
+            navigator.clipboard.writeText(currentTarget.value);
+            setDisplayMessage(true);
+          } }
+          data-testid="share-btn"
+        >
+          <img src={ shareIcon } alt="" />
+        </button>
+        <button
+          type="button"
+          onClick={ () => favoriteClick() }
+          data-testid="favorite-btn"
+          className="fav-btn-progress"
+          src={ isFavoriteIcon(isFavorite) }
+        >
+          <img src={ isFavoriteIcon(isFavorite) } alt="" />
+        </button>
+      </div>
     </div>);
 
   return (
     <div>
-      {validate && infosMeal}
-      {displayMessage && <p>Link copiado!</p>}
+      {validate && infosDrink}
     </div>
   );
 }

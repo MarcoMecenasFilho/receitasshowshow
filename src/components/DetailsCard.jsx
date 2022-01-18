@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import getFoodIngredients from '../service/getRecipeIngredients';
-import '../styles/drinkDetails.css';
+import '../styles/recipeDetails.css';
 
 export default function DetailsCard({ recipe, type }) {
   return (

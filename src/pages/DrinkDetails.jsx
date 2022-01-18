@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import DetailsCard from '../components/DetailsCard';
-import '../styles/drinkDetails.css';
+import '../styles/recipeDetails.css';
 import { favoriteCockTail,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { checkLocalStore } from '../service/localStorageFunctions';
@@ -45,7 +45,7 @@ export default function DrinkDetails() {
   }
 
   const infoDrinks = (
-    <div className="details-div">
+    <div className="details-div drink-background">
 
       <DetailsCard recipe={ recipeApi } type="Drink" />
       { doneButtonHide
@@ -59,7 +59,7 @@ export default function DrinkDetails() {
           }
         >
           {' '}
-          {inProgress ? 'Continuar Receita' : 'Iniciar Receita'}
+          {inProgress ? 'Continue Recipe' : 'Start Recipe'}
 
         </button>) }
       <div className="btns-fav-share">
@@ -87,8 +87,8 @@ export default function DrinkDetails() {
         <ProfileLink />
       </div>
       {displayMessage && <p className="clip-board">Link copiado!</p>}
-      <div className="carosel-drink">
-        <h2 className="recomendadas">Recomendadas</h2>
+      <div className="carousel-drink">
+        <h2 className="recomendadas">recommended</h2>
         <CarouselDrink />
       </div>
     </div>

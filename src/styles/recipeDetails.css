@@ -1,16 +1,24 @@
 
-
-.details-div {
-  align-items: center;
+.drink-background {
   background-image: url('../images/drinkdetails.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.food-background {
+  background-image: url('../images/fooddetails.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.details-div {
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 .div-img {
   width: 100%;
 }
@@ -98,7 +106,7 @@
 }
 
 .fav-btn {
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0);
   border-radius: 10px;
   border-style: none;
   opacity: 0.8;
@@ -110,11 +118,11 @@
 }
 
 .share-btn {
-  width: 30%;
+  background-color: rgb(255, 255, 255, 0);
   border-radius: 10px;
   border-style: none;
-  background-color: white;
   opacity: 0.8;
+  width: 30%;
 }
 
 .share-btn img {
@@ -135,12 +143,9 @@
   font-size: 30px;
   margin: 0 0 0 4%;
 }
-.carosel-drink {
-  background-image: url('../images/drinkdetails.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding-bottom: 1px;
+
+.carousel-food, .carousel-drink {
+  width: 100%;
 }
 
 .card-carousel {
@@ -149,7 +154,7 @@
   justify-content: center;
   margin: auto;
   margin-bottom: 40px;
-  width: 66.5%;
+  width: 30%;
 }
 
 .carousel {
@@ -226,7 +231,7 @@
 
   .div-img {
     height: 300px;
-    overflow: auto;
+    overflow: hidden;
     margin: 0;
   }
   

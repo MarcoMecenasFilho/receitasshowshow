@@ -79,7 +79,7 @@ export default function Login({ history }) {
             }
             data-testid="login-btn"
           >
-            Entrar
+            Enter
           </Button>
         </Form>
       </Card>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import DetailsCard from '../components/DetailsCard';
-import '../styles/drinkDetails.css';
+import '../styles/recipeDetails.css';
 import { favoriteFood,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { checkLocalStore } from '../service/localStorageFunctions';
@@ -9,6 +9,7 @@ import { checkButtonStartMeal } from '../service/StartButtonFunction';
 import shareIcon from '../images/iconCompartilhar.png';
 import Footer from '../components/Footer';
 import CarouselMeal from '../components/CarouselMeal';
+import ProfileLink from '../components/ProfileLInk';
 
 export default function RecipeDetails() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -44,7 +45,7 @@ export default function RecipeDetails() {
   }
 
   const infoMeals = (
-    <div className="details-div">
+    <div className="details-div food-background">
       <DetailsCard recipe={ recipeApi } type="Meal" />
       { doneButtonHide
       && (
@@ -57,7 +58,7 @@ export default function RecipeDetails() {
           }
         >
           {' '}
-          {inProgress ? 'Continuar Receita' : 'Iniciar Receita'}
+          {inProgress ? 'Continue Recipe' : 'Start Recipe'}
 
         </button>) }
       <div className="btns-fav-share">
@@ -82,19 +83,19 @@ export default function RecipeDetails() {
         >
           <img src={ shareIcon } alt="" />
         </button>
+        <ProfileLink />
       </div>
       {displayMessage && <p className="clip-board">Link copiado!</p>}
-
+      <div className="carousel-food">
+        <h2 className="recomendadas">recommended</h2>
+        <CarouselMeal />
+      </div>
     </div>
   );
 
   return (
     <div>
       {validate && infoMeals}
-      <div className="carosel-drink">
-        <h2 className="recomendadas">Recomendadas</h2>
-        <CarouselMeal />
-      </div>
       <Footer />
     </div>
   );

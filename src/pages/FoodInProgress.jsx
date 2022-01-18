@@ -112,8 +112,7 @@ export default function FoodInProgress() {
           disabled={ incrementIngredients !== totalIngredients }
           onClick={ () => clickDone() }
         >
-          Finalizar
-
+          Finish
         </button>
         <button
           type="button"

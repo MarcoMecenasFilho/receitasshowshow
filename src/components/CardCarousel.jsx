@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import '../styles/drinkDetails.css';
+import '../styles/recipeDetails.css';
 
 export default function CardCarousel({ results, type }) {
   return (

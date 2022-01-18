@@ -29,6 +29,19 @@
   width: fit-content;
 }
 
+.isAlcoholic {
+  background: rgb(235, 235, 235);
+  border-radius: 10px;
+  color: black;
+  font-size: larger;
+  font-weight: 800;
+  margin-left: 4%;
+  margin-top: 30px;
+  padding: 10px;
+  opacity: 0.8;
+  width: fit-content;
+}
+
 .ingredient-measure {
   background-color: rgb(235, 235, 235);
   border-radius: 5px;
@@ -92,10 +105,10 @@
 }
 
 .fav-btn-progress {
-  width: 25%;
+  background-color: rgb(165, 42, 42, 0);
   border-radius: 10px;
   border-style: none;
-  background-color: white;
+  width: 25%;
 }
 
 .fav-btn-progress img {
@@ -103,10 +116,10 @@
 }
 
 .share-btn-progress {
-  width: 25%;
+  background-color: rgb(165, 42, 42, 0);
   border-radius: 10px;
   border-style: none;
-  background-color: white;
+  width: 25%;
 }
 
 .share-btn-progress img {

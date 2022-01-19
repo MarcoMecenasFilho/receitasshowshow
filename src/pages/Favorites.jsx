@@ -13,6 +13,12 @@ export default function Favorites() {
     setFavorites(JSON.parse(localStorage.getItem('favoriteRecipes')));
   }, []);
 
+  function removeFavorite(id) {
+    const newState = favorites.filter((recipeSaved) => recipeSaved.id !== id);
+    localStorage.setItem('favoriteRecipes', JSON.stringify(newState));
+    setFavorites(JSON.parse(localStorage.getItem('favoriteRecipes')));
+  }
+
   return (
     <div className="main-div-fav">
       <img src={ bannergif } alt="banner gif" />
@@ -50,11 +56,15 @@ export default function Favorites() {
         </section>
         <section className="cards-section">
           {
-            (favorites && filters === '') && <FavoritesCard favorite={ favorites } />
+            (favorites && filters === '') && <FavoritesCard
+              onclick={ removeFavorite }
+              favorite={ favorites }
+            />
           }
           {
             (favorites && filters === 'food') && (
               <FavoritesCard
+                onclick={ removeFavorite }
                 favorite={ favorites.filter((fav) => fav.type === 'comida') }
               />
             )
@@ -63,6 +73,7 @@ export default function Favorites() {
             (favorites && filters === 'drink') && (
               <FavoritesCard
                 favorite={ favorites.filter((fav) => fav.type === 'bebida') }
+                onclick={ removeFavorite }
               />
             )
           }

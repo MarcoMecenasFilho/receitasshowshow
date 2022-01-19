@@ -4,14 +4,7 @@ import PropTypes from 'prop-types';
 import iconfavorite from '../images/iconfavorite.png';
 import '../styles/favorites.css';
 
-export default function FavoritesCard({ favorite }) {
-  function removeFromLocalStorage(id) {
-    const recipesSaved = JSON.parse(localStorage.getItem('favoriteRecipes'));
-    const newState = recipesSaved.filter((recipeSaved) => recipeSaved.id !== id);
-    localStorage.setItem('favoriteRecipes', JSON.stringify(newState));
-    document.location.reload();
-  }
-
+export default function FavoritesCard({ favorite, onclick }) {
   return (
     <div className="cards-container-fav">
       { favorite !== {}
@@ -41,7 +34,7 @@ export default function FavoritesCard({ favorite }) {
               <div className="btns-favs">
                 <button
                   type="button"
-                  onClick={ () => removeFromLocalStorage(recipe.id) }
+                  onClick={ () => onclick(recipe.id) }
                 >
                   <img
                     src={ iconfavorite }
@@ -58,4 +51,5 @@ export default function FavoritesCard({ favorite }) {
 
 FavoritesCard.propTypes = {
   favorite: PropTypes.objectOf().isRequired,
+  onclick: PropTypes.func.isRequired,
 };

@@ -4,6 +4,7 @@ import getRecipeIngredients from '../service/getRecipeIngredients';
 import { favoriteCockTail,
   isFavoriteIcon, favoriteCheckRecipe } from '../service/favoriteFunctions';
 import { clickCocktailsBox, checkedBox } from '../service/checkBoxFunctions';
+import ProfileLink from '../components/ProfileLInk';
 import doneDrink from '../service/doneRecipesFunctions';
 import shareIcon from '../images/iconCompartilhar.png';
 import { checkLocalStore,
@@ -122,6 +123,15 @@ export default function DrinkInProgress() {
         </button>
         <button
           type="button"
+          onClick={ () => favoriteClick() }
+          data-testid="favorite-btn"
+          className="fav-btn-progress"
+          src={ isFavoriteIcon(isFavorite) }
+        >
+          <img src={ isFavoriteIcon(isFavorite) } alt="" />
+        </button>
+        <button
+          type="button"
           className="share-btn-progress"
           value={ `http://localhost:3000/bebidas/${id}` }
           onClick={ ({ currentTarget }) => {
@@ -132,15 +142,9 @@ export default function DrinkInProgress() {
         >
           <img src={ shareIcon } alt="" />
         </button>
-        <button
-          type="button"
-          onClick={ () => favoriteClick() }
-          data-testid="favorite-btn"
-          className="fav-btn-progress"
-          src={ isFavoriteIcon(isFavorite) }
-        >
-          <img src={ isFavoriteIcon(isFavorite) } alt="" />
-        </button>
+        <div className="profilelink-progress">
+          <ProfileLink />
+        </div>
       </div>
     </div>);
 

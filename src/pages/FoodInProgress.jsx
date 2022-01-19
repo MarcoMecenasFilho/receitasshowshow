@@ -10,6 +10,7 @@ import { totalSteps,
   checkBoxSteepsDone, checkLocalStore } from '../service/localStorageFunctions';
 import shareIcon from '../images/iconCompartilhar.png';
 import Footer from '../components/Footer';
+import ProfileLink from '../components/ProfileLInk';
 
 export default function FoodInProgress() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -116,6 +117,16 @@ export default function FoodInProgress() {
         </button>
         <button
           type="button"
+          className="fav-btn-progress"
+          onClick={ () => favoriteMeals() }
+          data-testid="favorite-btn"
+          src={ isFavoriteIcon(isFavorite) }
+        >
+          <img src={ isFavoriteIcon(isFavorite) } alt="" />
+
+        </button>
+        <button
+          type="button"
           className="share-btn-progress"
           value={ `http://localhost:3000/comidas/${id}` }
           onClick={ ({ currentTarget }) => {
@@ -126,16 +137,9 @@ export default function FoodInProgress() {
         >
           <img src={ shareIcon } alt="" />
         </button>
-        <button
-          type="button"
-          className="fav-btn-progress"
-          onClick={ () => favoriteMeals() }
-          data-testid="favorite-btn"
-          src={ isFavoriteIcon(isFavorite) }
-        >
-          <img src={ isFavoriteIcon(isFavorite) } alt="" />
-
-        </button>
+        <div className="profilelink-progress">
+          <ProfileLink />
+        </div>
       </div>
     </div>);
 

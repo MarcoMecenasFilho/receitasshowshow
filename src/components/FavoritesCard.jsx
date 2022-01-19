@@ -1,30 +1,22 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import shareIcon from '../images/shareIcon.svg';
-import blackHeartIcon from '../images/blackHeartIcon.svg';
-import AppContext from '../context/AppContext';
-import '../styles/Favorite.css';
+import iconfavorite from '../images/iconfavorite.png';
+import '../styles/favorites.css';
 
-// https://stackoverflow.com/questions/29168719/can-you-target-an-elements-parent-element-using-event-target
-// https://stackoverflow.com/questions/39501289/in-reactjs-how-to-copy-text-to-clipboard
-
-export default function FavoritesCard({ favorites }) {
-  const [displayMessage, setDisplayMessage] = useState(false);
-  const { setFavorites } = useContext(AppContext);
-
+export default function FavoritesCard({ favorite }) {
   function removeFromLocalStorage(id) {
     const recipesSaved = JSON.parse(localStorage.getItem('favoriteRecipes'));
     const newState = recipesSaved.filter((recipeSaved) => recipeSaved.id !== id);
     localStorage.setItem('favoriteRecipes', JSON.stringify(newState));
-    setFavorites(newState);
+    document.location.reload();
   }
 
   return (
-    <div>
-      { favorites !== {}
-          && favorites.map((recipe, index) => (
-            <div key={ index } className="card-recipe">
+    <div className="cards-container-fav">
+      { favorite !== {}
+          && favorite.map((recipe, index) => (
+            <div key={ index } className="card-recipe-fav">
               <Link to={ `/${recipe.type}s/${recipe.id}` }>
                 <div className="card-elements">
                   <img
@@ -32,7 +24,7 @@ export default function FavoritesCard({ favorites }) {
                     alt=""
                     data-testid={ `${index}-horizontal-image` }
                   />
-                  <div className="cads-text">
+                  <div className="cards-text">
                     <p
                       data-testid={ `${index}-horizontal-top-text` }
                     >
@@ -47,37 +39,23 @@ export default function FavoritesCard({ favorites }) {
                 </div>
               </Link>
               <div className="btns-favs">
-                <button type="button" onClick={ () => removeFromLocalStorage(recipe.id) }>
-                  <img
-                    src={ blackHeartIcon }
-                    alt=""
-                    data-testid={ `${index}-horizontal-favorite-btn` }
-                  />
-                </button>
                 <button
                   type="button"
-                  value={ `http://localhost:3000/${recipe.type}s/${recipe.id}` }
-                  onClick={ ({ currentTarget }) => {
-                    navigator.clipboard.writeText(currentTarget.value);
-                    setDisplayMessage(true);
-                  } }
+                  onClick={ () => removeFromLocalStorage(recipe.id) }
                 >
                   <img
-                    src={ shareIcon }
+                    src={ iconfavorite }
                     alt=""
-                    data-testid={ `${index}-horizontal-share-btn` }
+                    data-testid={ `${index}-horizontal-favorite-btn` }
                   />
                 </button>
               </div>
             </div>
           ))}
-      {
-        displayMessage && <p>Link copiado!</p>
-      }
     </div>
   );
 }
 
 FavoritesCard.propTypes = {
-  favorites: PropTypes.objectOf().isRequired,
+  favorite: PropTypes.objectOf().isRequired,
 };

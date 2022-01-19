@@ -78,6 +78,10 @@
   text-decoration: line-through;
 }
 
+.profilelink-progress {
+  margin-left: 4%;
+}
+
 .btns-div {
   display: flex;
   justify-content: space-around;

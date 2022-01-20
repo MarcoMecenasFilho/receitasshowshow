@@ -9,7 +9,7 @@ export default function CardRecipes({ results, type }) {
   const slicedResults = results.slice(0, MAX_RESULTS);
 
   return (
-    <div className="container">
+    <div className="container-recipes">
       {
         slicedResults.map((result, index) => (
           <div

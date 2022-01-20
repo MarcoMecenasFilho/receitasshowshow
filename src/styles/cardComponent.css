@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6,6 +6,7 @@
 
 .card-recipe {
   background-color: white;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-recipe a {
@@ -39,4 +40,4 @@
     background-color: white;
   }
   
-}
+} */

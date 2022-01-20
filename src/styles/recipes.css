@@ -20,6 +20,38 @@
   height: 100%;
 }
 
+.container-recipes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-recipe {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  margin: 15px;
+  width: 80%;
+}
+
+.card-recipe a {
+  text-decoration: none;
+}
+.card-recipe img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.card-recipe p {
+  color: black;
+
+  font-size: 30px;
+  font-weight: 800;
+  padding: 5px 0;
+  text-align: center;
+}
+
+
 .main-div-drinks img {
   width: 100%;
 }
@@ -62,7 +94,7 @@
   margin: 20px 0 20px 40px;
 }
 
-main {
+.main-recipes {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -120,13 +152,27 @@ main {
 
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 800px){
+
   .filters-Btns button {
     font-size: 40px;
   }
 
   .filters-Btns-drink button {
     font-size: 40px;
+  }
+
+  .container-recipes {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80%;
+  }
+
+  .card-recipe {
+    width: 20%;
   }
 }
 
@@ -142,6 +188,18 @@ main {
 
   .filters-Btns-drink button {
     font-size: 60px;
+  }
+
+  .container-recipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80%;
+  }
+
+  .card-recipe {
+    width: 20%;
   }
   
 }

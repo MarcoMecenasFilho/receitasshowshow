@@ -1,6 +1,6 @@
-.main-div-fav {
+.main-div-made {
   align-items: center;
-  background-image: url('../images/favorite.jpg');
+  background-image: url('../images/recipesmade.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -9,11 +9,11 @@
   height: 100%;
 }
 
-.main-div-fav img {
+.main-div-made img {
   width: 100%;
 }
 
-.main-div-fav  header {
+.main-div-made  header {
   align-items: flex-start;
   background-color: black;
   color:  white;
@@ -22,11 +22,11 @@
   width: 100%;
 }
 
-.main-div-fav main {
+.main-div-made main {
   margin-bottom: 400px;
 }
 
-.user-infos-fav {
+.user-infos-made {
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -34,48 +34,48 @@
   width: 100%;
 }
 
-.user-infos-fav h1 {
+.user-infos-made h1 {
   font-size: 60px;
 }
 
-.filters-Btns-fav {
+.filters-Btns-made {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px 0 ;
   opacity: 0.8;
-  width: 95%;
-
+  width: 100%;
 }
 
-.filters-Btns-fav button {
+.filters-Btns-made button {
   border-radius: 10px;
   border-style: none;
   font-size: 25px;
   margin: 5px;
 }
 
-.filters-Btns-fav button:hover {
+.filters-Btns-made button:hover {
   background-color: red;
   opacity: 0.8;
 }
 
-.filters-Btns-fav button:focus {
+.filters-Btns-made button:focus {
   background-color: red;
   opacity: 0.8;
 }
-.cards-section {
+.cards-section-made {
   width: 100%;
 }
 
-.cards-container-fav {
-  width: 100%;
+.cards-container-made {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
+  width: 100%;
 }
 
-.card-recipe-fav {
+.card-recipe-made {
   align-items: flex-end;
   background-color: white;
   border-radius: 10px;
@@ -83,74 +83,97 @@
   display: flex;
   flex-direction: column;
   margin: 30px;
-  padding-bottom: 10px;
+  opacity: 0.9;
   width: 90%;
-  opacity: 0.8;
 }
 
-.card-recipe-fav a {
+.card-recipe-made a {
   text-decoration: none;
 }
 
-.card-elements {
+.card-elements-made {
   display: flex;
 }
 
-.card-elements img {
+.card-elements-made img {
   border-radius: 10px 10px 0 0;
   width: 50%;
 }
 
-.cards-text {
-  margin-left: 15px;
+
+.tags-container {
+  width: 100%;
 }
 
-.cards-text p:nth-child( 1 ) {
+.tags-container p {
+  background-color: rgb(173, 92, 116);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10spx;
+  margin-right: 4px;
+  padding: 2px;
+  text-align: center;
+}
+.cards-text-made {
+  margin-left: 15px;
+  width: 50%;
+}
+
+.cards-text-made p:nth-child( 1 ) {
   color: darkgray;
   font-size: 90%;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   margin-top: 30px;
 }
 
-.cards-text p:nth-child( 2 ) {
+.cards-text-made p:nth-child( 2 ) {
   color: black;
   font-size: 90%;
   font-weight: 800;
   margin-bottom: 0;
+  opacity: 0.8;
 }
 
-.btns-favs { 
+.cards-text-made p:nth-child( 3 ) {
+  color: rgb(63, 63, 63);
+  font-size: 90%;
+  margin-bottom: 0;
+}
+
+.btns-made { 
   background-color: rgb(235, 235, 235);;
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  height: 100%;
+  padding: 0;
 }
 
-.btns-favs button {
+.btns-made button {
   border-style: none;
+  margin: 10px;
 }
 
-.btns-favs img {
+.btns-made img {
   width: 50%;
   background-color: rgb(255, 255, 255, 0);
 }
 
-
-
 @media screen and (min-width: 600px){
-  .filters-Btns-fav button {
+
+  .filters-Btns-made button {
     font-size: 40px;
   }
 }
 
 @media screen and (min-width: 840px){
-  .cards-container-fav {
+  .cards-container-made {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .card-recipe-fav {
+  .card-recipe-made {
     width: 35%;
   }
 
@@ -158,13 +181,12 @@
 
 @media screen and (min-width: 1400px){
 
-  .user-infos-fav h1 {
+  .user-infos-made h1 {
     font-size: 100px;
   }
 
-  .filters-Btns-fav button {
+  .filters-Btns-made button {
     font-size: 60px;
   }
   
 }
-

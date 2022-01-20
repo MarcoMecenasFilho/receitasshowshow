@@ -74,7 +74,7 @@ export default function Drinks() {
         </div>
         <SearchBar />
       </header>
-      <main>
+      <main className="main-recipes">
         <div className="filters-Btns-drink">
           {filters.map((filter, index) => (
             <button

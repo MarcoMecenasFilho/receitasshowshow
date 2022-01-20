@@ -22,8 +22,9 @@
   width: 100%;
 }
 
-.main-div-fav main {
+.main-fav {
   margin-bottom: 400px;
+  width: 100%;
 }
 
 .user-infos-fav {
@@ -144,10 +145,12 @@
 }
 
 @media screen and (min-width: 840px){
+
   .cards-container-fav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .card-recipe-fav {
@@ -157,6 +160,12 @@
 }
 
 @media screen and (min-width: 1400px){
+  .cards-container-fav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
   .user-infos-fav h1 {
     font-size: 100px;

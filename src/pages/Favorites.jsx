@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProfileLink from '../components/ProfileLInk';
 import FavoritesCard from '../components/FavoritesCard';
 import bannergif from '../images/banner.gif';
+import Footer from '../components/Footer';
 import '../styles/favorites.css';
 
 export default function Favorites() {
@@ -30,7 +31,7 @@ export default function Favorites() {
           </h1>
         </div>
       </header>
-      <main>
+      <main className="main-fav">
         <section className="filters-Btns-fav">
           <button
             type="button"
@@ -79,6 +80,7 @@ export default function Favorites() {
           }
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

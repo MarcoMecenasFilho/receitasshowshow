@@ -22,8 +22,9 @@
   width: 100%;
 }
 
-.main-div-made main {
+.main-recipe {
   margin-bottom: 400px;
+  width: 100%;
 }
 
 .user-infos-made {
@@ -64,14 +65,14 @@
   opacity: 0.8;
 }
 .cards-section-made {
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cards-container-made {
-  align-items: flex-start;
+  align-items:center;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
   width: 100%;
 }
 
@@ -171,6 +172,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .card-recipe-made {
@@ -180,6 +183,14 @@
 }
 
 @media screen and (min-width: 1400px){
+
+  .cards-container-made {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
   .user-infos-made h1 {
     font-size: 100px;

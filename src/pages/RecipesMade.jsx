@@ -25,7 +25,7 @@ export default function RecipesMade() {
           <h1 data-testid="page-title">Receitas Feitas</h1>
         </div>
       </header>
-      <main>
+      <main className="main-recipe">
         <section className="filters-Btns-made">
           <button
             type="button"

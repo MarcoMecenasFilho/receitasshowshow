@@ -20,6 +20,7 @@ import DrinkInProgress from './pages/DrinkInProgress';
 import ExploreArea from './pages/ExploreArea';
 import NotFound from './pages/NotFound';
 import DrinkDetails from './pages/DrinkDetails';
+import NewUser from './pages/NewUser';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route exact path="/perfil" component={ Profile } />
         <Route exact path="/receitas-feitas" component={ RecipesMade } />
         <Route exact path="/receitas-favoritas" component={ Favorites } />
+        <Route exact path="/newuser" component={ NewUser } />
         <Route path="*" component={ NotFound } />
       </Switch>
     </AppProvider>

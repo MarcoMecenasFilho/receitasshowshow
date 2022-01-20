@@ -3,7 +3,7 @@
   align-items: center;
   background-image: url('../images/5555.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +31,12 @@ padding: 3%;
 }
 
 .login-card {
-  margin-bottom: 40px;
+  margin-bottom: 180px;
+}
+
+.button-login {
+  display: flex;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 651px){

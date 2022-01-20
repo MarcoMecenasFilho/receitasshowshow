@@ -1,35 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, FloatingLabel, Card } from 'react-bootstrap';
 import banner from '../images/logo.gif';
 import '../styles/login.css';
 
-export default function Login({ history }) {
+export default function NewUser({ history }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect(() => {
-    if (!localStorage.getItem('user')) {
-      localStorage.setItem('user', JSON.stringify({
-        email: 'admin@admin.com',
-        password: 'lolzinho' }));
-    }
-  }, []);
-
-  function submitUser(e) {
+  function newUser(e) {
     e.preventDefault();
-    const userLocalStore = JSON.parse(localStorage.getItem('user'));
-    if (email === userLocalStore.email && password === userLocalStore.password) {
-      localStorage.setItem('mealsToken', 1);
-      localStorage.setItem('cocktailsToken', 1);
-      history.push('/comidas');
-    } else {
-      alert('email e/ou senha incorretos, caso tenha esquecido. Cadastrar novo usuário');
-    }
-  }
-
-  function newUser() {
-    history.push('/newuser');
+    const userLogin = { email, password };
+    localStorage.setItem('user', JSON.stringify(userLogin));
+    history.push('/');
   }
 
   const validateEmail = (validEmail) => {
@@ -48,12 +31,13 @@ export default function Login({ history }) {
   };
 
   const PASSWORD_LENGTH = 6;
+
   return (
 
     <div className="div-login">
       <img src={ banner } alt="banner" />
       <Card className="login-card">
-        <Form onSubmit={ (e) => submitUser(e) } className="form-login">
+        <Form onSubmit={ (e) => newUser(e) } className="form-login">
           <h1>Login:</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <FloatingLabel
@@ -96,15 +80,7 @@ export default function Login({ history }) {
               }
               data-testid="login-btn"
             >
-              Enter
-            </Button>
-            <Button
-              variant="warning"
-              type="button"
-              data-testid="newuser-btn"
-              onClick={ newUser }
-            >
-              New User
+              Create User
             </Button>
           </div>
         </Form>
@@ -113,7 +89,7 @@ export default function Login({ history }) {
   );
 }
 
-Login.propTypes = {
+NewUser.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,

@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
-import iconrefazer from '../images/iconrefazer.png';
+import PropTypes from 'prop-types';
 import '../styles/recipesMade.css';
+import iconrefazer from '../images/iconrefazer.png';
 
 export default function DrinkDoneCard({ recipe, index }) {
   const { image, name, alcoholicOrNot, doneDate, id } = recipe;
@@ -33,22 +33,23 @@ export default function DrinkDoneCard({ recipe, index }) {
             alt=""
             data-testid={ `${index}-horizontal-image` }
           />
-          <div className="cads-text-made">
+          <div className="cards-text-made">
             <p data-testid={ `${index}-horizontal-top-text` }>{alcoholicOrNot}</p>
             <p data-testid={ `${index}-horizontal-name` }>{name}</p>
             <p data-testid={ `${index}-horizontal-done-date` }>
-              {` Feito em: ${doneDate}`}
+              {` Made in: ${doneDate}`}
             </p>
           </div>
         </div>
       </Link>
-      <div className="btns-made" />
-      <button
-        type="button"
-        onClick={ remakeRecipe }
-      >
-        <img src={ iconrefazer } alt="refazer" />
-      </button>
+      <div className="btns-made">
+        <button
+          type="button"
+          onClick={ remakeRecipe }
+        >
+          <img src={ iconrefazer } alt="refazer" />
+        </button>
+      </div>
     </div>
   );
 }

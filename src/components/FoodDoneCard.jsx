@@ -41,7 +41,7 @@ export default function FoodDoneCard({ recipe, index }) {
             </p>
             <p data-testid={ `${index}-horizontal-name` }>{name}</p>
             <p data-testid={ `${index}-horizontal-done-date` }>
-              {` Feito em: ${doneDate}`}
+              {` Made in: ${doneDate}`}
             </p>
             <section className="tags-container">
               {

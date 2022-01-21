@@ -1,0 +1,71 @@
+.main-div-explore {
+  align-items: center;
+  background-image: url('../images/3333.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-div-explore img {
+  width: 100%;
+}
+
+.main-div-explore  header {
+  align-items: flex-start;
+  background-color: black;
+  color:  white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-infos-explore {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.user-infos-explore h1 {
+  font-size: 60px;
+}
+
+.links-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.links-container button {
+  height: 120px;
+  background-color: rgb(209, 209, 209, 0.9);
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+.links-container button img {
+  height: 100px;
+}
+
+.btn-infos-explore {
+  display: flex;
+  align-items: center;
+}
+.btn-infos-explore h2 {
+background-color: rgb(209, 209, 209, 0);
+}
+
+@media screen and (max-width: 880px){
+  .links-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

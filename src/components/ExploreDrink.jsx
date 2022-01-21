@@ -1,5 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import iconingredient from '../images/iconingredient.png';
+import iconsuprise from '../images/iconsuprise.png';
 
 export default function ExploreDrink() {
   const history = useHistory();
@@ -12,20 +14,26 @@ export default function ExploreDrink() {
   }
 
   return (
-    <div>
+    <div className="links-container-food">
       <button
         type="button"
         data-testid="explore-by-ingredient"
         onClick={ () => history.push('/explorar/bebidas/ingredientes') }
       >
-        Por Ingredientes
+        <div className="btn-infos-explore">
+          <h2>Ingrediente</h2>
+          <img src={ iconingredient } alt="food" />
+        </div>
       </button>
       <button
         type="button"
         data-testid="explore-surprise"
         onClick={ () => fetchUrl() }
       >
-        Me Surpreenda!
+        <div className="btn-infos-explore">
+          <h2> Me Surpreenda!</h2>
+          <img src={ iconsuprise } alt="food" />
+        </div>
       </button>
     </div>
   );

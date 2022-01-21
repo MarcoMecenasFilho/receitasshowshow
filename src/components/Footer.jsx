@@ -14,7 +14,7 @@ export default function Footer() {
       <Link src={ exploreIcon } to="/explorar" data-testid="explore-bottom-btn">
         <img src={ exploreIcon } alt="explore icon" />
       </Link>
-      <Link src={ mealIcon } to="comidas" data-testid="food-bottom-btn">
+      <Link src={ mealIcon } to="/comidas" data-testid="food-bottom-btn">
         <img src={ mealIcon } alt="meal icon" />
       </Link>
     </footer>

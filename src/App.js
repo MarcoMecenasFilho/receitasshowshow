@@ -11,7 +11,7 @@ import Foods from './pages/Foods';
 import IngredientsFood from './pages/IngredientsFood';
 import IngredientsDrinks from './pages/IngredientsDrinks';
 import Profile from './pages/Profile';
-import RecipeDetails from './pages/RecipeDetails';
+import FoodDetails from './pages/FoodDetails';
 import RecipesMade from './pages/RecipesMade';
 import Login from './pages/Login';
 import AppProvider from './context/AppProvider';
@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/" component={ Login } />
         <Route exact path="/comidas" component={ Foods } />
         <Route exact path="/bebidas" component={ Drinks } />
-        <Route exact path="/comidas/:id" component={ RecipeDetails } />
+        <Route exact path="/comidas/:id" component={ FoodDetails } />
         <Route exact path="/bebidas/:id" component={ DrinkDetails } />
         <Route exact path="/comidas/:id/in-progress" component={ FoodInProgress } />
         <Route exact path="/bebidas/:id/in-progress" component={ DrinkInProgress } />

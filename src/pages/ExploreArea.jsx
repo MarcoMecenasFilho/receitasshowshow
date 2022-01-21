@@ -4,6 +4,8 @@ import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import AppContext from '../context/AppContext';
 import CardRecipes from '../components/CardRecipes';
+import bannergif from '../images/banner.gif';
+import '../styles/explore.css';
 
 export default function ExploreArea() {
   const [filtersByArea, setFiltersByArea] = useState([]);
@@ -58,15 +60,21 @@ export default function ExploreArea() {
   }, []);
 
   return (
-    <header>
-      <ProfileLink />
-      <h1 data-testid="page-title">
-        Explorar Origem
-      </h1>
-      <SearchBar />
+    <div className="main-div-local">
+      <img src={ bannergif } alt="banner gif" />
+      <header>
+        <div className="user-infos-local">
+          <ProfileLink />
+          <h1 data-testid="page-title">
+            Explorar Origem
+          </h1>
+        </div>
+        <SearchBar />
+      </header>
       <select
         onChange={ ({ target }) => filterBylocal(target) }
         data-testid="explore-by-area-dropdown"
+        className="select-local"
       >
         {filtersByArea.map((area, index) => (
           <option
@@ -85,5 +93,6 @@ export default function ExploreArea() {
         ? <CardRecipes results={ mealResults } type={ isMeals } />
         : <CardRecipes results={ mealDefault } type={ isMeals } />}
       <Footer />
-    </header>);
+    </div>
+  );
 }

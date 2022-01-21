@@ -61,11 +61,113 @@
 background-color: rgb(209, 209, 209, 0);
 }
 
-@media screen and (max-width: 880px){
-  .links-container {
+.links-container-food {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.links-container-food button {
+  height: 120px;
+  background-color: rgb(209, 209, 209, 0.9);
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+.links-container-food button img {
+  height: 100px;
+}
+
+.links-container-ingredients {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 120px;
+  width: 90%;
+}
+
+.links-container-ingredients button {
+  border-radius: 10px;
+  border-style: none;
+  margin: 10px;
+  opacity: 0.9;
+  width: 15%;
+}
+
+.links-container-ingredients button p {
+  font-size: 90%;
+}
+
+.main-div-local {
+  align-items: center;
+  background-image: url('../images/3333.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-div-local img {
+  width: 100%;
+}
+
+
+.main-div-local  header {
+  align-items: flex-start;
+  background-color: black;
+  color:  white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-infos-local {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.user-infos-local h1 {
+  font-size: 60px;
+}
+
+
+.select-local {
+  align-self: center;
+  border-radius: 10px;
+  border-style: none;
+  padding: 5px;
+  margin: 30px;
+}
+
+@media screen and (max-width: 600px){
+  .links-container-ingredients button {
+    width: 100%;
+  }
+  .links-container-ingredients button p {
+    font-size: 60%;
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+  .links-container, .links-container-food {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 50px;
   }
+  
+  .links-container-ingredients button {
+    width: 20%;
+  }
+
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../styles/cardComponent.css';
 
 export default function CardRecipes({ results, type }) {
   const MAX_RESULTS = 12;

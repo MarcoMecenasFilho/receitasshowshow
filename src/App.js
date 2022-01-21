@@ -21,6 +21,7 @@ import ExploreArea from './pages/ExploreArea';
 import NotFound from './pages/NotFound';
 import DrinkDetails from './pages/DrinkDetails';
 import NewUser from './pages/NewUser';
+import EditProfile from './pages/EditProfile';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route exact path="/receitas-feitas" component={ RecipesMade } />
         <Route exact path="/receitas-favoritas" component={ Favorites } />
         <Route exact path="/newuser" component={ NewUser } />
+        <Route exact path="/editperfil" component={ EditProfile } />
         <Route path="*" component={ NotFound } />
       </Switch>
     </AppProvider>

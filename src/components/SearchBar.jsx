@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import searchIcon from '../images/searchIcon.svg';
 import AppContext from '../context/AppContext';
 import '../styles/searchbarComponent.css';
 
@@ -101,7 +100,6 @@ export default function SearchBar() {
         type="button"
         onClick={ toggleSearchDisplay }
         data-testid="search-top-btn"
-        src={ searchIcon }
         className="btn-search"
       >
         Pesquisar

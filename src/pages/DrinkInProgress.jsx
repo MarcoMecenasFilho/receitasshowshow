@@ -9,6 +9,7 @@ import doneDrink from '../service/doneRecipesFunctions';
 import shareIcon from '../images/iconCompartilhar.png';
 import { checkLocalStore,
   totalSteps, checkBoxSteepsDone } from '../service/localStorageFunctions';
+import Footer from '../components/Footer';
 
 export default function DrinkInProgress() {
   const [recipeApi, setRecipeApi] = useState({});
@@ -60,7 +61,7 @@ export default function DrinkInProgress() {
   const {
     strDrinkThumb, strDrink, strCategory, strInstructions, strAlcoholic } = recipeApi;
   const infosDrink = (
-    <div className="inprogress-details">
+    <div className="inprogress-details inprogress-back-drinks">
       <div className="div-img">
         <img data-testid="recipe-photo" src={ strDrinkThumb } alt="" />
       </div>
@@ -151,6 +152,7 @@ export default function DrinkInProgress() {
   return (
     <div>
       {validate && infosDrink}
+      <Footer />
     </div>
   );
 }

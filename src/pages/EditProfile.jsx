@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, FloatingLabel, Card } from 'react-bootstrap';
 import banner from '../images/logo.gif';
-import '../styles/login.css';
+import '../styles/editprofile.css';
 
 export default function EditProfile({ history }) {
   const [email, setEmail] = useState('');
@@ -39,10 +39,10 @@ export default function EditProfile({ history }) {
 
   return (
 
-    <div className="div-login">
+    <div className="div-edit">
       <img src={ banner } alt="banner" />
-      <Card className="login-card">
-        <Form onSubmit={ (e) => saveProfile(e) } className="form-login">
+      <Card className="edit-card">
+        <Form onSubmit={ (e) => saveProfile(e) } className="form-edit">
           <h1>Editar perfil:</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <FloatingLabel
@@ -88,7 +88,7 @@ export default function EditProfile({ history }) {
               />
             </FloatingLabel>
           </Form.Group>
-          <div className="button-login">
+          <div className="button-edit">
             <Button
               variant="primary"
               type="submit"

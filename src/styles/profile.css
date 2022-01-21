@@ -1,5 +1,9 @@
 .main-div-profile {
   align-items: center;
+  background-image: url('../images/perfil.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100%;

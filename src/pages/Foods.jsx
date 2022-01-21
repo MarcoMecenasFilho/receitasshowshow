@@ -65,7 +65,7 @@ export default function Foods() {
   }, []);
 
   return (
-    <div className="main-div-foods">
+    <div className="main-div">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos">

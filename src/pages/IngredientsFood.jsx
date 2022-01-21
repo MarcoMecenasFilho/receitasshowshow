@@ -36,7 +36,7 @@ export default function IngredientsFood() {
   }
 
   return (
-    <div className="main-div-explore">
+    <div className="main-div-explore  backingredients-foods">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos-explore">

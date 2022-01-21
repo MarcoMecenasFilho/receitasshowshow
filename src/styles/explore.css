@@ -1,6 +1,6 @@
 .main-div-explore {
   align-items: center;
-  background-image: url('../images/3333.jpg');
+  background-image: url('../images/explore.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -103,7 +103,7 @@ background-color: rgb(209, 209, 209, 0);
 
 .main-div-local {
   align-items: center;
-  background-image: url('../images/3333.jpg');
+  background-image: url('../images/local.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -145,6 +145,22 @@ background-color: rgb(209, 209, 209, 0);
   border-style: none;
   padding: 5px;
   margin: 30px;
+}
+
+.backdrinks {
+  background-image: url('../images/exploredrink.jpg');
+}
+
+.backfood {
+  background-image: url('../images/explorefood.jpg');
+}
+
+.backingredients-drinks {
+  background-image: url('../images/ingredientdrinks.jpg');
+}
+
+.backingredients-foods {
+  background-image: url('../images/ingredientfood.jpg');
 }
 
 @media screen and (max-width: 600px){

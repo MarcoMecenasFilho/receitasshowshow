@@ -36,7 +36,7 @@ export default function IngredientsDrinks() {
   }
 
   return (
-    <div className="main-div-explore">
+    <div className="main-div-explore  backingredients-drinks">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos-explore">
@@ -44,7 +44,7 @@ export default function IngredientsDrinks() {
           <h1 data-testid="page-title">Ingredientes</h1>
         </div>
       </header>
-      <div className="links-container-ingredients">
+      <div className="links-container-ingredients ">
         {
           ingredientsList && (
             ingredientsList.map((ingredient, index) => (

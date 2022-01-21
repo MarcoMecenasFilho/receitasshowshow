@@ -29,6 +29,11 @@
   width: fit-content;
 }
 
+.inprogress-back-drinks {
+  background-image: url('../images/drinkprogress.jpg');
+}
+
+
 .isAlcoholic {
   background: rgb(235, 235, 235);
   border-radius: 10px;

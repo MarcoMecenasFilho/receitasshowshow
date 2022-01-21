@@ -65,7 +65,7 @@ export default function Drinks() {
   }, []);
 
   return (
-    <div className="main-div-drinks">
+    <div className="main-div main-div-backdrinks">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos">

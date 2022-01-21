@@ -7,7 +7,7 @@ import bannergif from '../images/banner.gif';
 
 export default function ExploreDrinks() {
   return (
-    <div className="main-div-explore">
+    <div className="main-div-explore backdrinks">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos-explore">

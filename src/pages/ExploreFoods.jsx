@@ -7,7 +7,7 @@ import '../styles/explore.css';
 
 export default function ExploreFoods() {
   return (
-    <div className="main-div-explore">
+    <div className="main-div-explore backfood">
       <img src={ bannergif } alt="banner gif" />
       <header>
         <div className="user-infos-explore">

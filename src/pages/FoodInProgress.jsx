@@ -24,7 +24,7 @@ export default function FoodInProgress() {
   const id = page.split('/')[2];
 
   const url = window.location.href;
-  const urlSplit = url.split('in-progress');
+  const urlSplit = url.split('/in-progress');
 
   function inialState() {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -131,7 +131,7 @@ export default function FoodInProgress() {
         <button
           type="button"
           className="share-btn-progress"
-          value={ urlSplit }
+          value={ urlSplit[0] }
           onClick={ ({ currentTarget }) => {
             navigator.clipboard.writeText(currentTarget.value);
             setDisplayMessage(true);

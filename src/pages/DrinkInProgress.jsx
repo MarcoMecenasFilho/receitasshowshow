@@ -23,7 +23,7 @@ export default function DrinkInProgress() {
   const id = page.split('/')[2];
 
   const url = window.location.href;
-  const urlSplit = url.split('in-progress');
+  const urlSplit = url.split('/in-progress');
 
   function inicialStates() {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)

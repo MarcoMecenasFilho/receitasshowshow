@@ -20,6 +20,7 @@ export default function DrinkDetails() {
   const [doneButtonHide, setDoneButtonHide] = useState(true);
   const history = useHistory();
   const page = history.location.pathname;
+  const url = window.location.href;
   const id = page.split('/')[2];
 
   function inialState() {
@@ -76,7 +77,7 @@ export default function DrinkDetails() {
           className="share-btn"
           type="button"
           data-testid="share-btn"
-          value={ `http://localhost:3000/bebidas/${id}` }
+          value={ url }
           onClick={ ({ currentTarget }) => {
             navigator.clipboard.writeText(currentTarget.value);
             setDisplayMessage(true);

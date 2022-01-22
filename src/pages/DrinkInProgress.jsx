@@ -22,6 +22,9 @@ export default function DrinkInProgress() {
   const page = history.location.pathname;
   const id = page.split('/')[2];
 
+  const url = window.location.href;
+  const urlSplit = url.split('in-progress');
+
   function inicialStates() {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((response) => response.json())
@@ -134,7 +137,7 @@ export default function DrinkInProgress() {
         <button
           type="button"
           className="share-btn-progress"
-          value={ `http://localhost:3000/bebidas/${id}` }
+          value={ urlSplit[0] }
           onClick={ ({ currentTarget }) => {
             navigator.clipboard.writeText(currentTarget.value);
             setDisplayMessage(true);

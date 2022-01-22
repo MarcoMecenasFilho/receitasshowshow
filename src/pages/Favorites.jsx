@@ -38,21 +38,21 @@ export default function Favorites() {
             data-testid="filter-by-all-btn"
             onClick={ () => setFilters('') }
           >
-            All
+            Todas
           </button>
           <button
             type="button"
             data-testid="filter-by-food-btn"
             onClick={ () => setFilters('food') }
           >
-            Foods
+            Comidas
           </button>
           <button
             type="button"
             data-testid="filter-by-drink-btn"
             onClick={ () => setFilters('drink') }
           >
-            Drinks
+            Bebidas
           </button>
         </section>
         <section className="cards-section">

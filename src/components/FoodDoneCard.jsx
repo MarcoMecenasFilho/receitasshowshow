@@ -8,7 +8,7 @@ export default function FoodDoneCard({ recipe, index }) {
   const { image, category, area, name, doneDate, tags, id } = recipe;
 
   const history = useHistory();
-  const splitTags = tags[0].split(',');
+  const splitTags = tags ? tags.split(', ') : [];
 
   function remakeRecipe() {
     const recipesInprogress = JSON.parse(localStorage

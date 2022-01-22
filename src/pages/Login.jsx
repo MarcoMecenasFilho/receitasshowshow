@@ -96,7 +96,7 @@ export default function Login({ history }) {
               }
               data-testid="login-btn"
             >
-              Enter
+              Entrar
             </Button>
             <Button
               variant="warning"
@@ -104,7 +104,7 @@ export default function Login({ history }) {
               data-testid="newuser-btn"
               onClick={ newUser }
             >
-              New User
+              Novo Usuário
             </Button>
           </div>
         </Form>

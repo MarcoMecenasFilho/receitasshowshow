@@ -38,7 +38,7 @@ export default function NewUser({ history }) {
       <img src={ banner } alt="banner" />
       <Card className="login-card">
         <Form onSubmit={ (e) => newUser(e) } className="form-login">
-          <h1>Login:</h1>
+          <h1>Novo Usuário:</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <FloatingLabel
               controlId="floatingInput"
@@ -80,7 +80,7 @@ export default function NewUser({ history }) {
               }
               data-testid="login-btn"
             >
-              Create User
+              Criar Usuário
             </Button>
           </div>
         </Form>

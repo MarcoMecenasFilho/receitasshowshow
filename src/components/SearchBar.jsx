@@ -156,6 +156,7 @@ export default function SearchBar() {
               placeholder="Digitar busca"
               onChange={ ({ target }) => setSearchKey(target.value) }
             />
+            <p>Utilizar palavras em inglês</p>
             <button
               id="search"
               type="button"

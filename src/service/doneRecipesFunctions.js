@@ -41,7 +41,6 @@ export default function doneDrink(id, recipeApiState) {
 
 export function doneFood(id, recipeApiState) {
   const { strMeal, strCategory, strArea, strMealThumb, strTags } = recipeApiState;
-  const tag = strTags.split(', ');
   const doneRecipe = JSON.parse(localStorage.getItem('doneRecipes'));
 
   if (!doneRecipe) {
@@ -54,7 +53,7 @@ export function doneFood(id, recipeApiState) {
         name: strMeal,
         image: strMealThumb,
         doneDate: getDate(),
-        tags: tag,
+        tags: strTags,
       }]));
   }
   if (doneRecipe && doneRecipe.some((food) => food.id === id) === false) {
@@ -67,7 +66,7 @@ export function doneFood(id, recipeApiState) {
         name: strMeal,
         image: strMealThumb,
         doneDate: getDate(),
-        tags: tag,
+        tags: strTags,
       }]));
   }
 }

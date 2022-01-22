@@ -59,7 +59,7 @@ export default function RecipeDetails() {
           }
         >
           {' '}
-          {inProgress ? 'Continue Recipe' : 'Start Recipe'}
+          {inProgress ? 'Continuar Receita' : 'Começar Receita'}
 
         </button>) }
       <div className="btns-fav-share">
@@ -88,7 +88,7 @@ export default function RecipeDetails() {
       </div>
       {displayMessage && <p className="clip-board">Link copiado!</p>}
       <div className="carousel-food">
-        <h2 className="recomendadas">recommended</h2>
+        <h2 className="recomendadas">recomendadas</h2>
         <CarouselMeal />
       </div>
     </div>

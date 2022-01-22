@@ -71,7 +71,7 @@ export default function FoodInProgress() {
       </div>
       <h1 data-testid="recipe-title">{strMeal}</h1>
       <h5 data-testid="recipe-category">{strCategory}</h5>
-      <h2>Ingredients:</h2>
+      <h2>Ingredientes:</h2>
       <div className="ingredient-measure">
         <div>
           {getRecipesIngredients(recipeApi).map((ingredient, index) => (
@@ -99,7 +99,7 @@ export default function FoodInProgress() {
           ))}
         </div>
       </div>
-      <h2>Instructions</h2>
+      <h2>Instruções</h2>
       <p
         data-testid="instructions"
         className="instructions-inprogress"
@@ -116,7 +116,7 @@ export default function FoodInProgress() {
           disabled={ incrementIngredients !== totalIngredients }
           onClick={ () => clickDone() }
         >
-          Finish
+          Finalizar
         </button>
         <button
           type="button"

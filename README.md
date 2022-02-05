@@ -38,7 +38,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 <h4>Clique na imagem abaixo</h4>
 <br>
 <div align="center">
-<a  href="https://receitasshoshow.herokuapp.com/" target="_blank"><img width="40%" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" /></a> 
+<a  href="https://receitasshowshow.vercel.app/" target="_blank"><img width="40%" src="https://www.svgrepo.com/show/327408/logo-vercel.svg" /></a> 
 </div>
 <br>
 <h2>Instalar o projeto em sua máquina</h2>
